@@ -1,7 +1,7 @@
 import { makeAutoObservable } from "mobx";
 import { MenuItems, menuItem } from "./menu";
 import { project } from "../types";
-import { ProjectType } from "../../src/generated/graphql";
+import { ProjectType } from "../../generated/graphql";
 
 class MenuStore {
 	TopMenu: menuItem[] = MenuItems.top;

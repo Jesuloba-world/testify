@@ -1,6 +1,11 @@
 import type { NextPage } from "next";
 import { useState } from "react";
-import { AuthInput, AuthWrapper, AuthButton, ErrorBox } from "../components";
+import {
+	AuthInput,
+	AuthWrapper,
+	AuthButton,
+	ErrorBox,
+} from "../src/components";
 import { loginFormElements } from "../src/form/elements";
 import Link from "next/link";
 import { loginSchema } from "../src/form/schema";

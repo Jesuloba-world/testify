@@ -1,6 +1,11 @@
 import type { NextPage } from "next";
 import { useState } from "react";
-import { AuthWrapper, ErrorBox, AuthInput, AuthButton } from "../components";
+import {
+	AuthWrapper,
+	ErrorBox,
+	AuthInput,
+	AuthButton,
+} from "../src/components";
 import { signupFormElements } from "../src/form/elements";
 import { signUpSchema } from "../src/form/schema";
 import { useForm } from "react-hook-form";

@@ -4,10 +4,10 @@ import { ReactElement, useEffect } from "react";
 import { Client } from "../../src/apollo/client";
 import { GetProjectsDocument } from "../../src/generated/graphql";
 import { observer } from "mobx-react";
-import { SideNavLayout } from "../../components";
+import { SideNavLayout } from "../../src/components";
 import { ProjectType } from "../../src/generated/graphql";
-import menuStore from "../../store/menu/menuStore";
-import { requireAuthentication } from "../../util/checkAuth";
+import menuStore from "../../src/store/menu/menuStore";
+import { requireAuthentication } from "../../src/util/checkAuth";
 
 interface props {
 	projects: ProjectType[];

@@ -1,7 +1,7 @@
 import type { NextPageWithLayout } from "../../../types";
 import { ReactElement, useEffect } from "react";
 import { useRouter } from "next/router";
-import MenuStore from "../../../store/menu/menuStore";
+import MenuStore from "../../../src/store/menu/menuStore";
 import { observer } from "mobx-react";
 import { Client } from "../../../src/apollo/client";
 import {
@@ -9,7 +9,7 @@ import {
 	ProjectType,
 } from "../../../src/generated/graphql";
 import { GetServerSidePropsContext } from "next";
-import { SideNavLayout } from "../../../components";
+import { SideNavLayout } from "../../../src/components";
 
 interface props {
 	projects: ProjectType[];

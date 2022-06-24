@@ -1,4 +1,4 @@
-import { ProjectType } from "../src/generated/graphql";
+import { ProjectType } from "../generated/graphql";
 
 export interface project extends ProjectType {
 	active: boolean;

@@ -1,4 +1,4 @@
-import { FC, useEffect } from "react";
+import { FC } from "react";
 import { Logo } from "../..";
 import { MenuItem } from "./menuItem";
 import { useRouter } from "next/router";
