@@ -10,6 +10,8 @@ django-graphql-auth = "*"
 faker = "*"
 django-dotenv = "*"
 django-cors-headers = "*"
+black = "*"
+psycopg2 = "*"
 
 [dev-packages]
 
