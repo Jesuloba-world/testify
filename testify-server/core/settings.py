@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     "django_filters",
     "projects",
     "corsheaders",
+    "psycopg2"
 ]
 
 MIDDLEWARE = [

@@ -12,6 +12,7 @@ django-dotenv = "*"
 django-cors-headers = "*"
 black = "*"
 psycopg2 = "*"
+psycopg2-binary = "*"
 
 [dev-packages]
 
