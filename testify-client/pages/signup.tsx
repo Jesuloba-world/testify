@@ -30,7 +30,7 @@ const SignUp: NextPage = () => {
 			}
 			setErrorMessage("");
 			console.log(data);
-			// route to overview page
+			router.push("/overview");
 		},
 		onError(error) {
 			if (error.networkError) {

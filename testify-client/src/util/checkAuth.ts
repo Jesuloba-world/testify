@@ -7,8 +7,9 @@ export function requireAuthentication(
 	return async (context: GetServerSidePropsContext) => {
 		const { req } = context;
 		const refresh = req.cookies.refresh;
+		const access = req.cookies.access;
 
-		if (!refresh) {
+		if (!(access || refresh)) {
 			// Redirect to a page sent to it
 			return {
 				redirect: {

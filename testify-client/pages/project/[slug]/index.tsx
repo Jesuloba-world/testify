@@ -8,8 +8,8 @@ import {
 	GetProjectsDocument,
 	ProjectType,
 } from "../../../src/generated/graphql";
-import { GetServerSidePropsContext } from "next";
 import { SideNavLayout } from "../../../src/components";
+import { requireAuthentication } from "../../../src/util/checkAuth";
 
 interface props {
 	projects: ProjectType[];
@@ -44,7 +44,7 @@ ProjectPage.getLayout = function getLayout(page: ReactElement) {
 
 export default ProjectPage;
 
-export async function getServerSideProps(context: GetServerSidePropsContext) {
+export const getServerSideProps = requireAuthentication(async () => {
 	// get Projects
 	const projects = await Client.query({
 		query: GetProjectsDocument,
@@ -55,4 +55,4 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
 			projects: projects.data.projects,
 		},
 	};
-}
+}, "/");

@@ -28,18 +28,15 @@ Overview.getLayout = function getLayout(page: ReactElement) {
 
 export default observer(Overview);
 
-export const getServerSideProps = requireAuthentication(
-	async (ctx: GetServerSidePropsContext) => {
-		// get Projects
-		const projects = await Client.query({
-			query: GetProjectsDocument,
-		});
+export const getServerSideProps = requireAuthentication(async () => {
+	// get Projects
+	const projects = await Client.query({
+		query: GetProjectsDocument,
+	});
 
-		return {
-			props: {
-				projects: projects.data.projects,
-			},
-		};
-	},
-	"/"
-);
+	return {
+		props: {
+			projects: projects.data.projects,
+		},
+	};
+}, "/");

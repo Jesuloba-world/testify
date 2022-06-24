@@ -17,7 +17,6 @@ import { useRouter } from "next/router";
 import { observer } from "mobx-react";
 import { useMutation } from "@apollo/client";
 import { LoginDocument } from "../src/generated/graphql";
-import { RiContactsBookLine } from "react-icons/ri";
 
 interface paramType extends MutationLoginArgs {
 	remember: boolean;
@@ -38,7 +37,7 @@ const Login: NextPage = () => {
 			}
 			setErrorMessage("");
 			console.log(data);
-			// route to overview page
+			router.push("/overview");
 		},
 		onError(error) {
 			if (error.networkError) {
