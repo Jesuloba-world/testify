@@ -37,6 +37,7 @@ const Login: NextPage = () => {
 			}
 			setErrorMessage("");
 			console.log(data);
+			reset();
 			router.push("/overview");
 		},
 		onError(error) {

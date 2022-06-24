@@ -29,6 +29,7 @@ const SignUp: NextPage = () => {
 				return;
 			}
 			setErrorMessage("");
+			reset();
 			console.log(data);
 			router.push("/overview");
 		},

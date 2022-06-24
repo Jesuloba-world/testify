@@ -13,6 +13,7 @@ django-cors-headers = "*"
 black = "*"
 psycopg2 = "*"
 psycopg2-binary = "*"
+django-graphql-jwt = "0.3.4"
 
 [dev-packages]
 
