@@ -7,7 +7,8 @@ import {
 import { onError } from "@apollo/client/link/error";
 
 const httpLink = createHttpLink({
-	uri: "http://localhost:8000/graphql/",
+	// running on nginx server
+	uri: "http://localhost:8000/api/graphql/",
 	credentials: "include",
 });
 
